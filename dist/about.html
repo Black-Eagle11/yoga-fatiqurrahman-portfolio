@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tentang Yoga Fatiqurrahman dan proses belajar web engineering." />
+    <title>Tentang — Yoga Fatiqurrahman</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script>tailwind = { theme: { extend: { fontFamily: { sans: ['Manrope', 'ui-sans-serif', 'system-ui'] } } } };</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="page-enter antialiased">
+    <div class="pointer-events-none fixed inset-0 -z-10 site-grid"></div>
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#07111f]/85 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigasi utama">
+        <a href="index.html" class="focus-ring flex items-center gap-3 rounded-xl" aria-label="Beranda Yoga Fatiqurrahman">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-400 text-lg font-extrabold text-[#07111f] shadow-lg shadow-sky-500/20">YF</span>
+          <span class="hidden sm:block"><span class="block text-sm font-extrabold tracking-wide text-white">Yoga Fatiqurrahman</span><span class="mono block text-[11px] text-slate-400">ILKOM / UNDiksha</span></span>
+        </a>
+        <button id="menu-toggle" type="button" class="focus-ring rounded-xl border border-white/10 p-2 text-slate-200 hover:bg-white/10 md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Buka menu"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <div class="hidden items-center gap-1 md:flex"><a data-nav href="index.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Beranda</a><a data-nav href="about.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Tentang</a><a data-nav href="projects.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Proyek</a><a data-nav href="javascript.html" class="focus-ring ml-2 rounded-xl border border-sky-300/30 bg-sky-400/10 px-4 py-2 text-sm font-bold text-sky-200 transition hover:border-sky-300/70 hover:bg-sky-400/20">JavaScript Lab</a></div>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-white/10 px-5 pb-4 pt-2 md:hidden"><div class="grid gap-1"><a data-nav href="index.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Beranda</a><a data-nav href="about.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Tentang</a><a data-nav href="projects.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Proyek</a><a data-nav href="javascript.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-bold text-sky-200 hover:bg-sky-400/10">JavaScript Lab</a></div></div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-6xl px-5 pb-16 pt-16 lg:px-8 lg:pb-20 lg:pt-24">
+        <div class="reveal max-w-3xl">
+          <p class="mono text-sm text-sky-300">about.me</p>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">Belajar teknologi dengan rasa ingin tahu yang panjang.</h1>
+          <p class="mt-6 text-base leading-8 text-slate-300 sm:text-lg">Saya Yoga Fatiqurrahman, mahasiswa S1 Ilmu Komputer di Universitas Pendidikan Ganesha. Saat ini saya mengembangkan fondasi di frontend, machine learning, dan keamanan sistem.</p>
+        </div>
+      </section>
+
+      <section class="mx-auto grid max-w-6xl gap-5 px-5 pb-20 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+        <div class="reveal glass rounded-3xl p-7 sm:p-9">
+          <p class="mono text-xs text-slate-500">identity.card</p>
+          <div class="mt-8 flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-sky-300 to-blue-600 text-3xl font-black text-[#07111f]">YF</div>
+          <h2 class="mt-7 text-2xl font-extrabold text-white">Yoga Fatiqurrahman</h2>
+          <p class="mt-2 text-slate-400">Mahasiswa Ilmu Komputer · Universitas Pendidikan Ganesha</p>
+          <dl class="mt-8 space-y-4 border-t border-white/10 pt-6 text-sm">
+            
+            <div class="flex justify-between gap-4"><dt class="text-slate-500">Domisili</dt><dd class="font-bold text-slate-200">Bali, Indonesia</dd></div>
+            <div class="flex justify-between gap-4"><dt class="text-slate-500">Fokus</dt><dd class="font-bold text-slate-200">Web · AI/ML</dd></div>
+          </dl>
+        </div>
+        <div class="reveal delay-1 rounded-3xl border border-white/10 bg-white/[0.035] p-7 sm:p-9">
+          <p class="mono text-xs text-sky-300">working.principles</p>
+          <div class="mt-7 grid gap-7 sm:grid-cols-2">
+            <div><span class="mono text-sm text-slate-500">01</span><h2 class="mt-3 text-xl font-extrabold text-white">Mulai dari masalah</h2><p class="mt-3 text-sm leading-7 text-slate-400">Teknologi lebih berguna ketika berangkat dari kebutuhan yang jelas dan dapat dirasakan pengguna.</p></div>
+            <div><span class="mono text-sm text-slate-500">02</span><h2 class="mt-3 text-xl font-extrabold text-white">Buat sesederhana mungkin</h2><p class="mt-3 text-sm leading-7 text-slate-400">Struktur yang mudah dipahami membantu proses belajar, pengujian, dan perawatan.</p></div>
+            <div><span class="mono text-sm text-slate-500">03</span><h2 class="mt-3 text-xl font-extrabold text-white">Iterasi dengan bukti</h2><p class="mt-3 text-sm leading-7 text-slate-400">Perubahan kecil diuji melalui tampilan, interaksi, dan umpan balik yang konkret.</p></div>
+            <div><span class="mono text-sm text-slate-500">04</span><h2 class="mt-3 text-xl font-extrabold text-white">Tetap mau belajar</h2><p class="mt-3 text-sm leading-7 text-slate-400">Fondasi yang kuat dibangun dari kebiasaan membaca dokumentasi dan mencoba langsung.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-y border-white/10 bg-[#091727]/70">
+        <div class="mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-24">
+          <div class="reveal mb-10 max-w-2xl"><p class="mono text-sm text-sky-300">tailwind.notes</p><h2 class="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Konsep Tailwind yang diterapkan.</h2><p class="mt-4 text-base leading-7 text-slate-400">Website ini menggunakan utility class langsung pada markup agar hubungan antara struktur dan tampilan mudah dipelajari.</p></div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="reveal card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5"><span class="mono text-xs text-sky-300">utility classes</span><p class="mt-4 text-sm leading-6 text-slate-300">Kelas seperti <code class="text-sky-200">px-5</code>, <code class="text-sky-200">rounded-xl</code>, dan <code class="text-sky-200">font-bold</code> membentuk komponen.</p></div>
+            <div class="reveal delay-1 card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5"><span class="mono text-xs text-sky-300">responsive design</span><p class="mt-4 text-sm leading-6 text-slate-300">Breakpoint <code class="text-sky-200">sm:</code>, <code class="text-sky-200">md:</code>, dan <code class="text-sky-200">lg:</code> mengubah layout sesuai layar.</p></div>
+            <div class="reveal delay-2 card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5"><span class="mono text-xs text-sky-300">states & colors</span><p class="mt-4 text-sm leading-6 text-slate-300">Hover, focus, border, background, dan teks memberi feedback visual yang jelas.</p></div>
+            <div class="reveal delay-3 card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5"><span class="mono text-xs text-sky-300">spacing & sizing</span><p class="mt-4 text-sm leading-6 text-slate-300">Spacing, max-width, min-height, dan ukuran teks menjaga ritme serta keterbacaan.</p></div>
+            <div class="reveal card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5"><span class="mono text-xs text-sky-300">flexbox</span><p class="mt-4 text-sm leading-6 text-slate-300">Navbar, tombol, badge, dan alignment memakai <code class="text-sky-200">flex</code> secara eksplisit.</p></div>
+            <div class="reveal delay-1 card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5"><span class="mono text-xs text-sky-300">grid</span><p class="mt-4 text-sm leading-6 text-slate-300">Grid dipakai untuk kartu proyek, statistik, dan layout dua kolom yang responsif.</p></div>
+            <div class="reveal delay-2 card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:col-span-2"><span class="mono text-xs text-sky-300">accessible interaction</span><p class="mt-4 text-sm leading-6 text-slate-300">Tombol menggunakan label, focus ring, kontras yang cukup, dan navigasi mobile agar tetap dapat digunakan dengan keyboard maupun touch.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-24">
+        <div class="reveal flex flex-col justify-between gap-6 rounded-3xl border border-sky-300/20 bg-sky-400/10 p-7 sm:flex-row sm:items-center sm:p-9"><div><p class="mono text-sm text-sky-300">next.stop</p><h2 class="mt-3 text-2xl font-extrabold text-white">Lihat hasil latihan yang sudah dibuat.</h2></div><a href="projects.html" class="focus-ring inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 px-5 py-3.5 text-sm font-extrabold text-[#07111f] hover:bg-sky-300">Buka proyek <span aria-hidden="true">↗</span></a></div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10"><div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-7 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8"><p>© <span data-year></span> Yoga Fatiqurrahman</p><p class="mono text-xs">built with Tailwind CSS + Vanilla JS</p></div></footer>
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>

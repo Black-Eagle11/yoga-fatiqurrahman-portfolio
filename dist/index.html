@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portofolio pribadi Yoga Fatiqurrahman, mahasiswa Ilmu Komputer Undiksha." />
+    <title>Yoga Fatiqurrahman — Portofolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script>
+      tailwind = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Manrope', 'ui-sans-serif', 'system-ui'] },
+            colors: { ink: '#07111f', panel: '#0c1a2b', skyaccent: '#65b7ff' }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="page-enter antialiased">
+    <div class="pointer-events-none fixed inset-0 -z-10 site-grid"></div>
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#07111f]/85 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigasi utama">
+        <a href="index.html" class="focus-ring flex items-center gap-3 rounded-xl" aria-label="Beranda Yoga Fatiqurrahman">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-400 text-lg font-extrabold text-[#07111f] shadow-lg shadow-sky-500/20">YF</span>
+          <span class="hidden sm:block">
+            <span class="block text-sm font-extrabold tracking-wide text-white">Yoga Fatiqurrahman</span>
+            <span class="mono block text-[11px] text-slate-400">ILKOM / UNDiksha</span>
+          </span>
+        </a>
+
+        <button id="menu-toggle" type="button" class="focus-ring rounded-xl border border-white/10 p-2 text-slate-200 hover:bg-white/10 md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Buka menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+
+        <div class="hidden items-center gap-1 md:flex">
+          <a data-nav href="index.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Beranda</a>
+          <a data-nav href="about.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Tentang</a>
+          <a data-nav href="projects.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Proyek</a>
+          <a data-nav href="javascript.html" class="focus-ring ml-2 rounded-xl border border-sky-300/30 bg-sky-400/10 px-4 py-2 text-sm font-bold text-sky-200 transition hover:border-sky-300/70 hover:bg-sky-400/20">JavaScript Lab</a>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="hidden border-t border-white/10 px-5 pb-4 pt-2 md:hidden">
+        <div class="grid gap-1">
+          <a data-nav href="index.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Beranda</a>
+          <a data-nav href="about.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Tentang</a>
+          <a data-nav href="projects.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Proyek</a>
+          <a data-nav href="javascript.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-bold text-sky-200 hover:bg-sky-400/10">JavaScript Lab</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden">
+        <div class="mx-auto grid max-w-6xl gap-14 px-5 pb-20 pt-20 lg:grid-cols-[1.08fr_.92fr] lg:items-center lg:px-8 lg:pb-28 lg:pt-28">
+          <div class="reveal">
+            <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-2 text-xs font-bold text-emerald-200">
+              <span class="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_14px_rgba(110,231,183,.8)]"></span>
+              Terbuka untuk belajar dan berkolaborasi
+            </div>
+            <p class="mono mb-5 text-sm text-sky-300">// personal portfolio / 2026</p>
+            <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
+              Membangun ide menjadi pengalaman digital yang <span class="text-sky-300">berarti.</span>
+            </h1>
+            <p class="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+              Saya Yoga Fatiqurrahman, mahasiswa Ilmu Komputer Undiksha yang sedang mendalami machine learning, web engineering, dan cara membuat produk digital yang sederhana untuk digunakan.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="projects.html" class="focus-ring inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 px-5 py-3.5 text-sm font-extrabold text-[#07111f] transition hover:bg-sky-300">
+                Lihat proyek
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="javascript.html" class="focus-ring inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-5 py-3.5 text-sm font-bold text-white transition hover:border-sky-300/50 hover:bg-sky-400/10">
+                Hitung target IPK
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal delay-2">
+            <div class="glass relative overflow-hidden rounded-3xl p-5 sm:p-7">
+              <div class="absolute -right-16 -top-20 h-48 w-48 rounded-full bg-sky-400/15 blur-3xl"></div>
+              <div class="relative">
+                <div class="mb-8 flex items-center justify-between">
+                  <span class="mono text-xs text-slate-400">profile.snapshot</span>
+                  <span class="rounded-full border border-sky-300/25 bg-sky-300/10 px-2.5 py-1 text-[11px] font-bold text-sky-200">UNDiksha / ILKOM</span>
+                </div>
+                <div class="flex items-center gap-5">
+                  <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-sky-300/30 bg-gradient-to-br from-sky-300 to-blue-600 text-2xl font-black text-[#07111f] shadow-xl shadow-blue-950/50">YF</div>
+                  <div>
+                    <h2 class="text-2xl font-extrabold text-white">Yoga Fatiqurrahman</h2>
+                    <p class="mt-1 text-sm text-slate-400">Mahasiswa Ilmu Komputer</p>
+                  </div>
+                </div>
+                <div class="mt-8 grid grid-cols-2 gap-3">
+                  <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                    <span class="mono block text-[11px] text-slate-500">focus.area</span>
+                    <span class="mt-2 block text-sm font-bold text-slate-100">AI / ML</span>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                    <span class="mono block text-[11px] text-slate-500">build.with</span>
+                    <span class="mt-2 block text-sm font-bold text-slate-100">Web & Python</span>
+                  </div>
+                </div>
+                <div class="mt-3 rounded-2xl border border-white/10 bg-[#07111f]/75 p-4">
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="mono text-slate-500">current.mode</span>
+                    <span class="font-bold text-emerald-300">learning / shipping</span>
+                  </div>
+                  <div class="mt-4 h-2 overflow-hidden rounded-full bg-white/10"><div class="h-full w-[78%] rounded-full bg-gradient-to-r from-sky-400 to-emerald-300"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-5 pb-20 lg:px-8 lg:pb-28">
+        <div class="reveal grid gap-4 sm:grid-cols-3">
+          <div class="card-hover rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+            <span class="mono text-xs text-sky-300">01 / direction</span>
+            <h2 class="mt-4 text-lg font-extrabold text-white">Belajar dengan proyek nyata</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-400">Setiap eksperimen dibuat sebagai latihan untuk memahami masalah, bukan sekadar mengejar tampilan.</p>
+          </div>
+          <div class="card-hover rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+            <span class="mono text-xs text-sky-300">02 / approach</span>
+            <h2 class="mt-4 text-lg font-extrabold text-white">Rapi, responsif, terukur</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-400">Struktur halaman, spacing, grid, dan interaksi dipikirkan agar tetap nyaman di layar kecil maupun besar.</p>
+          </div>
+          <div class="card-hover rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+            <span class="mono text-xs text-sky-300">03 / next</span>
+            <h2 class="mt-4 text-lg font-extrabold text-white">Tumbuh konsisten</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-400">Dari frontend dan JavaScript menuju sistem machine learning yang dapat dipakai dengan jelas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-y border-white/10 bg-[#091727]/70">
+        <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:px-8 lg:py-24">
+          <div class="reveal">
+            <p class="mono text-sm text-sky-300">selected.work</p>
+            <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Tiga area yang sedang saya bangun.</h2>
+            <p class="mt-5 max-w-md text-base leading-7 text-slate-400">Portofolio ini merangkum latihan yang menghubungkan analisis data, desain interaksi, dan implementasi web.</p>
+            <a href="projects.html" class="focus-ring mt-7 inline-flex items-center gap-2 rounded-xl text-sm font-extrabold text-sky-300 hover:text-sky-200">Buka semua proyek <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="reveal delay-1 grid gap-4 sm:grid-cols-3">
+            <a href="projects.html#sentiment" class="card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <span class="mono text-xs text-slate-500">01</span>
+              <h3 class="mt-9 text-lg font-extrabold text-white">Sentiment Analysis</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-400">Eksplorasi machine learning untuk membaca pola sentimen teks.</p>
+            </a>
+            <a href="projects.html#laundryly" class="card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <span class="mono text-xs text-slate-500">02</span>
+              <h3 class="mt-9 text-lg font-extrabold text-white">LAUNDRILY</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-400">Konsep layanan laundry dengan nota digital dan tracking.</p>
+            </a>
+            <a href="projects.html#frontend" class="card-hover rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <span class="mono text-xs text-slate-500">03</span>
+              <h3 class="mt-9 text-lg font-extrabold text-white">Frontend Lab</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-400">Latihan layout responsif, semantic HTML, dan Tailwind.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-5 py-20 lg:px-8 lg:py-24">
+        <div class="reveal rounded-3xl border border-sky-300/20 bg-gradient-to-br from-sky-400/15 via-blue-500/5 to-transparent p-7 sm:p-10">
+          <div class="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
+            <div>
+              <p class="mono text-sm text-sky-300">interactive.corner</p>
+              <h2 class="mt-4 max-w-xl text-3xl font-extrabold tracking-tight text-white">Coba fitur JavaScript yang ada di portofolio ini.</h2>
+              <p class="mt-4 max-w-xl text-sm leading-7 text-slate-300">Simulasikan IPS minimum untuk mengejar target IPK, lengkap dengan validasi dan riwayat di browser.</p>
+            </div>
+            <a href="javascript.html" class="focus-ring inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-extrabold text-[#07111f] transition hover:bg-sky-100">Buka kalkulator <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-7 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <p>© <span data-year></span> Yoga Fatiqurrahman</p>
+        <p class="mono text-xs">built with Tailwind CSS + Vanilla JS</p>
+      </div>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>
