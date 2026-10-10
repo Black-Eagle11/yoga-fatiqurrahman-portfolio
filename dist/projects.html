@@ -1,45 +1,592 @@
+```html
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kumpulan proyek dan latihan digital Yoga Fatiqurrahman." />
-    <title>Proyek — Yoga Fatiqurrahman</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <script>tailwind = { theme: { extend: { fontFamily: { sans: ['Manrope', 'ui-sans-serif', 'system-ui'] } } } };</script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="page-enter antialiased">
-    <div class="pointer-events-none fixed inset-0 -z-10 site-grid"></div>
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#07111f]/85 backdrop-blur-xl">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigasi utama">
-        <a href="index.html" class="focus-ring flex items-center gap-3 rounded-xl" aria-label="Beranda Yoga Fatiqurrahman"><span class="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-400 text-lg font-extrabold text-[#07111f] shadow-lg shadow-sky-500/20">YF</span><span class="hidden sm:block"><span class="block text-sm font-extrabold tracking-wide text-white">Yoga Fatiqurrahman</span><span class="mono block text-[11px] text-slate-400">ILKOM / UNDiksha</span></span></a>
-        <button id="menu-toggle" type="button" class="focus-ring rounded-xl border border-white/10 p-2 text-slate-200 hover:bg-white/10 md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Buka menu"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-        <div class="hidden items-center gap-1 md:flex"><a data-nav href="index.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Beranda</a><a data-nav href="about.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Tentang</a><a data-nav href="projects.html" class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white">Proyek</a><a data-nav href="javascript.html" class="focus-ring ml-2 rounded-xl border border-sky-300/30 bg-sky-400/10 px-4 py-2 text-sm font-bold text-sky-200 transition hover:border-sky-300/70 hover:bg-sky-400/20">JavaScript Lab</a></div>
-      </nav>
-      <div id="mobile-menu" class="hidden border-t border-white/10 px-5 pb-4 pt-2 md:hidden"><div class="grid gap-1"><a data-nav href="index.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Beranda</a><a data-nav href="about.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Tentang</a><a data-nav href="projects.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white">Proyek</a><a data-nav href="javascript.html" class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-bold text-sky-200 hover:bg-sky-400/10">JavaScript Lab</a></div></div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kumpulan proyek dan latihan digital Yoga Fatiqurrahman, meliputi machine learning, UI/UX, frontend engineering, dan e-commerce." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Proyek — Yoga Fatiqurrahman</title>
 
-    <main>
-      <section class="mx-auto max-w-6xl px-5 pb-14 pt-16 lg:px-8 lg:pb-20 lg:pt-24">
-        <div class="reveal flex flex-col justify-between gap-8 lg:flex-row lg:items-end"><div class="max-w-3xl"><p class="mono text-sm text-sky-300">selected.projects</p><h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">Eksperimen yang membentuk cara saya berpikir.</h1><p class="mt-6 text-base leading-8 text-slate-300 sm:text-lg">Bukan daftar teknologi, tetapi rangkaian latihan untuk memahami data, pengguna, dan antarmuka.</p></div><span class="mono inline-flex w-fit rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs text-slate-400">3 case studies</span></div>
-      </section>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/styles.css" />
 
-      <section class="mx-auto max-w-6xl space-y-5 px-5 pb-20 lg:px-8 lg:pb-28">
-        <article id="sentiment" class="reveal scroll-mt-28 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]">
-          <div class="grid lg:grid-cols-[.78fr_1.22fr]"><div class="relative min-h-64 overflow-hidden border-b border-white/10 bg-gradient-to-br from-blue-500/30 via-sky-400/10 to-transparent p-7 lg:border-b-0 lg:border-r lg:p-10"><span class="mono text-xs text-sky-200">01 / machine learning</span><div class="absolute bottom-8 left-7 right-7 lg:left-10 lg:right-10"><div class="mb-3 flex items-end gap-1"><span class="h-10 w-3 rounded-t bg-sky-300/80"></span><span class="h-16 w-3 rounded-t bg-sky-300/60"></span><span class="h-24 w-3 rounded-t bg-sky-300"></span><span class="h-14 w-3 rounded-t bg-emerald-300/80"></span><span class="h-20 w-3 rounded-t bg-emerald-300"></span><span class="h-28 w-3 rounded-t bg-sky-200"></span></div><div class="h-px bg-white/20"></div><p class="mono mt-3 text-[11px] text-slate-400">data → model → insight</p></div></div><div class="p-7 lg:p-10"><div class="flex flex-wrap gap-2"><span class="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1 text-xs font-bold text-sky-200">Python</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">NLP</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">Analysis</span></div><h2 class="mt-6 text-3xl font-extrabold text-white">Sentiment Analysis</h2><p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">Eksplorasi untuk mengklasifikasikan sentimen dari teks. Fokusnya adalah memahami alur dari preprocessing, pengujian model, sampai cara menyajikan hasil agar tidak berhenti sebagai angka.</p><div class="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2"><div><p class="mono text-xs text-slate-500">what I learned</p><p class="mt-2 text-sm leading-6 text-slate-300">Data yang rapi dan evaluasi yang jujur sama pentingnya dengan model.</p></div><div><p class="mono text-xs text-slate-500">next iteration</p><p class="mt-2 text-sm leading-6 text-slate-300">Membandingkan baseline dan model yang lebih efisien.</p></div></div></div></div>
-        </article>
+  <script>
+    tailwind = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-        <article id="laundryly" class="reveal scroll-mt-28 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]"><div class="grid lg:grid-cols-[1.22fr_.78fr]"><div class="order-2 p-7 lg:order-1 lg:p-10"><div class="flex flex-wrap gap-2"><span class="rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1 text-xs font-bold text-emerald-200">UI/UX</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">Product concept</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">IMK</span></div><h2 class="mt-6 text-3xl font-extrabold text-white">LAUNDRILY</h2><p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">Konsep layanan laundry yang mengubah proses manual menjadi alur yang lebih mudah dilacak: nota digital, live tracking, QR pickup, notifikasi, dan rating.</p><div class="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2"><div><p class="mono text-xs text-slate-500">problem</p><p class="mt-2 text-sm leading-6 text-slate-300">Pelanggan perlu tahu status cucian tanpa harus menanyakan ulang.</p></div><div><p class="mono text-xs text-slate-500">solution</p><p class="mt-2 text-sm leading-6 text-slate-300">Satu alur status yang informatif dari drop-off sampai pickup.</p></div></div></div><div class="order-1 flex min-h-64 flex-col justify-between border-b border-white/10 bg-gradient-to-br from-emerald-300/20 via-teal-400/10 to-transparent p-7 lg:order-2 lg:border-b-0 lg:border-l lg:p-10"><span class="mono text-xs text-emerald-200">02 / interaction design</span><div class="space-y-3"><div class="rounded-2xl border border-white/15 bg-[#07111f]/55 p-4"><div class="flex items-center justify-between"><span class="text-sm font-bold text-white">Order #LY-2415</span><span class="rounded-full bg-emerald-300/15 px-2 py-1 text-[11px] font-bold text-emerald-200">Diproses</span></div><div class="mt-4 h-2 rounded-full bg-white/10"><div class="h-full w-2/3 rounded-full bg-emerald-300"></div></div></div><div class="grid grid-cols-3 gap-2 text-center text-[11px] text-slate-400"><span class="rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-emerald-200">Masuk</span><span class="rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-emerald-200">Cuci</span><span class="rounded-xl border border-white/10 bg-white/5 px-2 py-3">Pickup</span></div></div></div></div></article>
+<body class="page-enter antialiased">
+  <div class="pointer-events-none fixed inset-0 -z-10 site-grid"></div>
 
-        <article id="frontend" class="reveal scroll-mt-28 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]"><div class="grid lg:grid-cols-[.78fr_1.22fr]"><div class="relative min-h-64 overflow-hidden border-b border-white/10 bg-gradient-to-br from-violet-400/20 via-blue-500/10 to-transparent p-7 lg:border-b-0 lg:border-r lg:p-10"><span class="mono text-xs text-violet-200">03 / web engineering</span><div class="absolute bottom-8 left-7 right-7 rounded-2xl border border-white/15 bg-[#07111f]/65 p-4 lg:left-10 lg:right-10"><div class="flex gap-2"><span class="h-2 w-2 rounded-full bg-rose-300"></span><span class="h-2 w-2 rounded-full bg-amber-300"></span><span class="h-2 w-2 rounded-full bg-emerald-300"></span></div><div class="mt-4 space-y-2"><div class="h-2 w-3/4 rounded bg-sky-300/60"></div><div class="h-2 w-1/2 rounded bg-white/20"></div><div class="grid grid-cols-3 gap-2 pt-2"><div class="h-10 rounded bg-white/10"></div><div class="h-10 rounded bg-white/10"></div><div class="h-10 rounded bg-white/10"></div></div></div></div></div><div class="p-7 lg:p-10"><div class="flex flex-wrap gap-2"><span class="rounded-full border border-violet-300/20 bg-violet-300/10 px-3 py-1 text-xs font-bold text-violet-200">Tailwind CSS</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">HTML</span><span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">JavaScript</span></div><h2 class="mt-6 text-3xl font-extrabold text-white">Frontend Lab</h2><p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">Kumpulan latihan membuat halaman yang semantic, responsif, dan interaktif. Website portofolio ini menjadi salah satu hasil latihan tersebut.</p><div class="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2"><div><p class="mono text-xs text-slate-500">implemented here</p><p class="mt-2 text-sm leading-6 text-slate-300">Utility classes, responsive breakpoints, Flexbox, Grid, hover/focus states, dan JavaScript DOM.</p></div><div><p class="mono text-xs text-slate-500">quality check</p><p class="mt-2 text-sm leading-6 text-slate-300">Tautan antarhalaman, menu mobile, focus state, dan kalkulator IPK diuji sebelum publish.</p></div></div></div></div></article>
-      </section>
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#07111f]/85 backdrop-blur-xl">
+    <nav
+      class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8"
+      aria-label="Navigasi utama"
+    >
+      <a
+        href="index.html"
+        class="focus-ring flex items-center gap-3 rounded-xl"
+        aria-label="Beranda Yoga Fatiqurrahman"
+      >
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-400 text-lg font-extrabold text-[#07111f] shadow-lg shadow-sky-500/20">
+          YF
+        </span>
 
-      <section class="mx-auto max-w-6xl px-5 pb-20 lg:px-8 lg:pb-24"><div class="reveal flex flex-col justify-between gap-6 rounded-3xl border border-white/10 bg-white/[0.035] p-7 sm:flex-row sm:items-center sm:p-9"><div><p class="mono text-sm text-sky-300">try.the.interaction</p><h2 class="mt-3 text-2xl font-extrabold text-white">Satu fitur JavaScript, langsung bisa dicoba.</h2></div><a href="javascript.html" class="focus-ring inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 px-5 py-3.5 text-sm font-extrabold text-[#07111f] hover:bg-sky-300">Masuk JavaScript Lab <span aria-hidden="true">→</span></a></div></section>
-    </main>
+        <span class="hidden sm:block">
+          <span class="block text-sm font-extrabold tracking-wide text-white">
+            Yoga Fatiqurrahman
+          </span>
+          <span class="mono block text-[11px] text-slate-400">
+            ILKOM / UNDiksha
+          </span>
+        </span>
+      </a>
 
-    <footer class="border-t border-white/10"><div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-7 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8"><p>© <span data-year></span> Yoga Fatiqurrahman</p><p class="mono text-xs">built with Tailwind CSS + Vanilla JS</p></div></footer>
-    <script src="assets/app.js" defer></script>
-  </body>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="focus-ring rounded-xl border border-white/10 p-2 text-slate-200 hover:bg-white/10 md:hidden"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Buka menu"
+      >
+        <svg
+          class="h-6 w-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+
+      <div class="hidden items-center gap-1 md:flex">
+        <a
+          data-nav
+          href="index.html"
+          class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white"
+        >
+          Beranda
+        </a>
+
+        <a
+          data-nav
+          href="about.html"
+          class="focus-ring rounded-xl px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white"
+        >
+          Tentang
+        </a>
+
+        <a
+          data-nav
+          href="projects.html"
+          aria-current="page"
+          class="focus-ring rounded-xl bg-white/10 px-4 py-2 text-sm font-bold text-white"
+        >
+          Proyek
+        </a>
+
+        <a
+          data-nav
+          href="javascript.html"
+          class="focus-ring ml-2 rounded-xl border border-sky-300/30 bg-sky-400/10 px-4 py-2 text-sm font-bold text-sky-200 transition hover:border-sky-300/70 hover:bg-sky-400/20"
+        >
+          JavaScript Lab
+        </a>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-white/10 px-5 pb-4 pt-2 md:hidden"
+    >
+      <div class="grid gap-1">
+        <a
+          data-nav
+          href="index.html"
+          class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white"
+        >
+          Beranda
+        </a>
+
+        <a
+          data-nav
+          href="about.html"
+          class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-white"
+        >
+          Tentang
+        </a>
+
+        <a
+          data-nav
+          href="projects.html"
+          aria-current="page"
+          class="mobile-link focus-ring rounded-xl bg-white/10 px-4 py-3 text-sm font-bold text-white"
+        >
+          Proyek
+        </a>
+
+        <a
+          data-nav
+          href="javascript.html"
+          class="mobile-link focus-ring rounded-xl px-4 py-3 text-sm font-bold text-sky-200 hover:bg-sky-400/10"
+        >
+          JavaScript Lab
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="mx-auto max-w-6xl px-5 pb-14 pt-16 lg:px-8 lg:pb-20 lg:pt-24">
+      <div class="reveal flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+        <div class="max-w-3xl">
+          <p class="mono text-sm text-sky-300">
+            selected.projects
+          </p>
+
+          <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+            Eksperimen yang membentuk cara saya berpikir.
+          </h1>
+
+          <p class="mt-6 text-base leading-8 text-slate-300 sm:text-lg">
+            Bukan daftar teknologi, tetapi rangkaian latihan untuk memahami
+            data, pengguna, antarmuka, dan pengembangan aplikasi web.
+          </p>
+        </div>
+
+        <span class="mono inline-flex w-fit rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs text-slate-400">
+          4 case studies
+        </span>
+      </div>
+    </section>
+
+    <!-- Project collection -->
+    <section
+      class="mx-auto max-w-6xl space-y-5 px-5 pb-20 lg:px-8 lg:pb-28"
+      aria-label="Daftar proyek"
+    >
+
+      <!-- 01: Sentiment Analysis -->
+      <article
+        id="sentiment"
+        class="reveal scroll-mt-28 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]"
+      >
+        <div class="grid lg:grid-cols-[.78fr_1.22fr]">
+          <div class="relative min-h-64 overflow-hidden border-b border-white/10 bg-gradient-to-br from-blue-500/30 via-sky-400/10 to-transparent p-7 lg:border-b-0 lg:border-r lg:p-10">
+            <span class="mono text-xs text-sky-200">
+              01 / machine learning
+            </span>
+
+            <div class="absolute bottom-8 left-7 right-7 lg:left-10 lg:right-10">
+              <div class="mb-3 flex items-end gap-1" aria-hidden="true">
+                <span class="h-10 w-3 rounded-t bg-sky-300/80"></span>
+                <span class="h-16 w-3 rounded-t bg-sky-300/60"></span>
+                <span class="h-24 w-3 rounded-t bg-sky-300"></span>
+                <span class="h-14 w-3 rounded-t bg-emerald-300/80"></span>
+                <span class="h-20 w-3 rounded-t bg-emerald-300"></span>
+                <span class="h-28 w-3 rounded-t bg-sky-200"></span>
+              </div>
+
+              <div class="h-px bg-white/20"></div>
+
+              <p class="mono mt-3 text-[11px] text-slate-400">
+                data → model → insight
+              </p>
+            </div>
+          </div>
+
+          <div class="p-7 lg:p-10">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-sky-300/20 bg-sky-300/10 px-3 py-1 text-xs font-bold text-sky-200">
+                Python
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                NLP
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                Analysis
+              </span>
+            </div>
+
+            <h2 class="mt-6 text-3xl font-extrabold text-white">
+              Sentiment Analysis
+            </h2>
+
+            <p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">
+              Eksplorasi untuk mengklasifikasikan sentimen dari teks.
+              Fokusnya adalah memahami alur dari preprocessing, pengujian
+              model, sampai cara menyajikan hasil agar tidak berhenti sebagai angka.
+            </p>
+
+            <div class="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2">
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  what I learned
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Data yang rapi dan evaluasi yang jujur sama pentingnya
+                  dengan model.
+                </p>
+              </div>
+
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  next iteration
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Membandingkan baseline dan model yang lebih efisien.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02: LAUNDRILY -->
+      <article
+        id="laundryly"
+        class="reveal scroll-mt-28 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]"
+      >
+        <div class="grid lg:grid-cols-[1.22fr_.78fr]">
+          <div class="order-2 p-7 lg:order-1 lg:p-10">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1 text-xs font-bold text-emerald-200">
+                UI/UX
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                Product concept
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                IMK
+              </span>
+            </div>
+
+            <h2 class="mt-6 text-3xl font-extrabold text-white">
+              LAUNDRILY
+            </h2>
+
+            <p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">
+              Konsep layanan laundry yang mengubah proses manual menjadi
+              alur yang lebih mudah dilacak: nota digital, live tracking,
+              QR pickup, notifikasi, dan rating.
+            </p>
+
+            <div class="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2">
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  problem
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Pelanggan perlu tahu status cucian tanpa harus menanyakan ulang.
+                </p>
+              </div>
+
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  solution
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Satu alur status yang informatif dari drop-off sampai pickup.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 flex min-h-64 flex-col justify-between border-b border-white/10 bg-gradient-to-br from-emerald-300/20 via-teal-400/10 to-transparent p-7 lg:order-2 lg:border-b-0 lg:border-l lg:p-10">
+            <span class="mono text-xs text-emerald-200">
+              02 / interaction design
+            </span>
+
+            <div class="space-y-3">
+              <div class="rounded-2xl border border-white/15 bg-[#07111f]/55 p-4">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="text-sm font-bold text-white">
+                    Order #LY-2415
+                  </span>
+                  <span class="rounded-full bg-emerald-300/15 px-2 py-1 text-[11px] font-bold text-emerald-200">
+                    Diproses
+                  </span>
+                </div>
+
+                <div class="mt-4 h-2 rounded-full bg-white/10">
+                  <div class="h-full w-2/3 rounded-full bg-emerald-300"></div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 text-center text-[11px] text-slate-400">
+                <span class="rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-emerald-200">
+                  Masuk
+                </span>
+                <span class="rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-emerald-200">
+                  Cuci
+                </span>
+                <span class="rounded-xl border border-white/10 bg-white/5 px-2 py-3">
+                  Pickup
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03: Frontend Lab -->
+      <article
+        id="frontend"
+        class="reveal scroll-mt-28 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]"
+      >
+        <div class="grid lg:grid-cols-[.78fr_1.22fr]">
+          <div class="relative min-h-64 overflow-hidden border-b border-white/10 bg-gradient-to-br from-violet-400/20 via-blue-500/10 to-transparent p-7 lg:border-b-0 lg:border-r lg:p-10">
+            <span class="mono text-xs text-violet-200">
+              03 / web engineering
+            </span>
+
+            <div class="absolute bottom-8 left-7 right-7 rounded-2xl border border-white/15 bg-[#07111f]/65 p-4 lg:left-10 lg:right-10">
+              <div class="flex gap-2" aria-hidden="true">
+                <span class="h-2 w-2 rounded-full bg-rose-300"></span>
+                <span class="h-2 w-2 rounded-full bg-amber-300"></span>
+                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+              </div>
+
+              <div class="mt-4 space-y-2" aria-hidden="true">
+                <div class="h-2 w-3/4 rounded bg-sky-300/60"></div>
+                <div class="h-2 w-1/2 rounded bg-white/20"></div>
+
+                <div class="grid grid-cols-3 gap-2 pt-2">
+                  <div class="h-10 rounded bg-white/10"></div>
+                  <div class="h-10 rounded bg-white/10"></div>
+                  <div class="h-10 rounded bg-white/10"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-7 lg:p-10">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-violet-300/20 bg-violet-300/10 px-3 py-1 text-xs font-bold text-violet-200">
+                Tailwind CSS
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                HTML
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                JavaScript
+              </span>
+            </div>
+
+            <h2 class="mt-6 text-3xl font-extrabold text-white">
+              Frontend Lab
+            </h2>
+
+            <p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">
+              Kumpulan latihan membuat halaman yang semantic, responsif,
+              dan interaktif. Website portofolio ini menjadi salah satu
+              hasil latihan tersebut.
+            </p>
+
+            <div class="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2">
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  implemented here
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Utility classes, responsive breakpoints, Flexbox, Grid,
+                  hover/focus states, dan JavaScript DOM.
+                </p>
+              </div>
+
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  quality check
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Tautan antarhalaman, menu mobile, focus state, dan
+                  kalkulator IPK diuji sebelum publish.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04: MotoParts E-Commerce -->
+      <article
+        id="motoparts"
+        class="reveal scroll-mt-28 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035]"
+      >
+        <div class="grid lg:grid-cols-[.78fr_1.22fr]">
+          <div class="relative min-h-64 overflow-hidden border-b border-white/10 bg-gradient-to-br from-orange-400/25 via-red-500/10 to-transparent p-7 lg:border-b-0 lg:border-r lg:p-10">
+            <span class="mono text-xs text-orange-200">
+              04 / e-commerce engineering
+            </span>
+
+            <div class="absolute bottom-8 left-7 right-7 rounded-2xl border border-white/15 bg-[#07111f]/70 p-5 lg:left-10 lg:right-10">
+              <div class="flex items-center justify-between gap-3">
+                <span class="mono text-xs text-slate-400">
+                  MOTOPARTS / STORE
+                </span>
+                <span class="h-2 w-2 rounded-full bg-emerald-300" aria-label="Online"></span>
+              </div>
+
+              <div class="mt-5 grid grid-cols-3 gap-3">
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3">
+                  <div class="flex h-12 items-center justify-center rounded-lg bg-orange-400/10 text-xl text-orange-200" aria-hidden="true">
+                    ⚙
+                  </div>
+                  <div class="mt-3 h-1.5 rounded bg-white/20"></div>
+                  <div class="mt-2 h-1.5 w-2/3 rounded bg-orange-300/60"></div>
+                </div>
+
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3">
+                  <div class="flex h-12 items-center justify-center rounded-lg bg-orange-400/10 text-xl text-orange-200" aria-hidden="true">
+                    ◈
+                  </div>
+                  <div class="mt-3 h-1.5 rounded bg-white/20"></div>
+                  <div class="mt-2 h-1.5 w-2/3 rounded bg-orange-300/60"></div>
+                </div>
+
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3">
+                  <div class="flex h-12 items-center justify-center rounded-lg bg-orange-400/10 text-xl text-orange-200" aria-hidden="true">
+                    ⌘
+                  </div>
+                  <div class="mt-3 h-1.5 rounded bg-white/20"></div>
+                  <div class="mt-2 h-1.5 w-2/3 rounded bg-orange-300/60"></div>
+                </div>
+              </div>
+
+              <p class="mono mt-4 text-[11px] text-slate-400">
+                parts · catalog · shopping
+              </p>
+            </div>
+          </div>
+
+          <div class="p-7 lg:p-10">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-orange-300/20 bg-orange-300/10 px-3 py-1 text-xs font-bold text-orange-200">
+                React
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                JavaScript
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                Vite
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-slate-300">
+                E-Commerce
+              </span>
+            </div>
+
+            <h2 class="mt-6 text-3xl font-extrabold text-white">
+              MotoParts E-Commerce
+            </h2>
+
+            <p class="mt-4 max-w-2xl text-base leading-8 text-slate-300">
+              Pengembangan aplikasi e-commerce untuk kebutuhan suku cadang
+              sepeda motor. Proyek ini menjadi latihan dalam membangun
+              aplikasi web menggunakan React dan JavaScript, dengan workflow
+              pengembangan Vite serta deployment melalui Vercel.
+            </p>
+
+            <div class="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-2">
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  project focus
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Pengembangan aplikasi web, komponen antarmuka, styling,
+                  dan pengalaman pengguna dalam berbelanja online.
+                </p>
+              </div>
+
+              <div>
+                <p class="mono text-xs text-slate-500">
+                  deployment
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-300">
+                  Aplikasi tersedia melalui Vercel dan source code dapat
+                  dipelajari melalui repository GitHub.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a
+                href="https://motoparts-e-commerce.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="focus-ring inline-flex items-center justify-center gap-2 rounded-xl bg-orange-300 px-5 py-3 text-sm font-extrabold text-[#07111f] transition hover:bg-orange-200"
+              >
+                Live Demo
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="https://github.com/Black-Eagle11/motoparts-e-commerce"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="focus-ring inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 px-5 py-3 text-sm font-bold text-slate-200 transition hover:bg-white/10"
+              >
+                Source Code
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- JavaScript Lab CTA -->
+    <section class="mx-auto max-w-6xl px-5 pb-20 lg:px-8 lg:pb-24">
+      <div class="reveal flex flex-col justify-between gap-6 rounded-3xl border border-white/10 bg-white/[0.035] p-7 sm:flex-row sm:items-center sm:p-9">
+        <div>
+          <p class="mono text-sm text-sky-300">
+            try.the.interaction
+          </p>
+
+          <h2 class="mt-3 text-2xl font-extrabold text-white">
+            Satu fitur JavaScript, langsung bisa dicoba.
+          </h2>
+        </div>
+
+        <a
+          href="javascript.html"
+          class="focus-ring inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 px-5 py-3.5 text-sm font-extrabold text-[#07111f] transition hover:bg-sky-300"
+        >
+          Masuk JavaScript Lab
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-7 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <p>
+        © <span data-year></span> Yoga Fatiqurrahman
+      </p>
+
+      <p class="mono text-xs">
+        built with Tailwind CSS + Vanilla JS
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
 </html>
+```
